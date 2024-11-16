@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in Javascript</title>
+</head>
+<body>
+    <script>
+
+        let a = "life";
+        console.log(`${a} is hard`);
+
+
+        let item = {
+            friend : "Ayush",
+            age : 34 ,
+            married : false,
+            bye : undefined
+
+        };
+
+        console.log(item);
+        console.log(typeof(item));
+
+
+        // How to manipulate name : value pairs inside the object 
+
+        const term = {
+            name : "Ayu",
+            friend : "no-one",
+            age:21
+        };
+
+        term["girlfriend"] = "Sexygirl";
+        term['code'] = 07;
+        // isses apene add kiya object kee ander const tha phir bhi 
+
+        console.log(term);
+        console.log(typeof(term));
+
+        // we can access object kee ander kee name value pairs by . also let me show you the example
+
+        const dict ={
+            "Large" : "something big",
+            "Small": "something small",
+            "Yakka" : "hardwork"  //Apen nhe isko access krr liya dot seeh 
+        };
+
+        // yee dono seeh aceess krr sakhte okk
+        console.log(dict.Yakka); //Direct hardwork as a output mil raha hee 
+        console.log(dict['Yakka']); //Direct hardwork as a output mil raha hee 
+
+    </script>
+</body>
+</html>

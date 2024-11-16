@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map Filter Reduce</title>
+</head>
+<body>
+    <script>
+        // MAP FILTER REDUCE important topics of the javascript 
+
+
+        // map() ==> Creates a new array element by performing some operation on each array element 
+        // Map hum tab use karte hee jab hume ek nava array bana hota hee 
+        // aur forEach tab use karte jab hume operation karna hota hee
+        // ek array kee existing element prr
+        
+        // forEach pee bass hum operation karte he 
+
+        // Array map method
+        let arr = [23,45,67,89,9,87];
+
+        let a = arr.map((value,index,array) =>{
+            console.log(value,index,array)
+            return value + 1
+        });
+
+        console.log(a);
+
+        // Array filter method 
+        // Filters an array with new value and also creates an new array 
+
+        let arr_2 = [12,76,89,65,34,22,11,9,8,7,5,4];
+        
+        // now using filter method 
+
+        let here = arr_2.filter((a)=>{
+            return a<10
+        });
+
+        console.log(here);
+         //it will filter and give 9,8,7,5,4 and therefore filter is used
+        //  jo jo values kii liye function true return kara vooh vooh values print 
+        //  hojayenge idar
+
+        // yee 2 noo original array koo modify nhi karr patee
+
+        // Arrays mein repeated values bhi rakh sakhte hee koi aesha rule nhi hee
+
+        arr_3 = [1,2,3,5,2,1];
+
+        let array_3 = arr_3.reduce((h1,h2)=>{
+            return h1 + h2
+            
+        });
+
+        console.log(array_3);
+
+        // how this is happening is first 1 and 2 is added = 3
+        // then 3 + 3 is added which is 6
+        // then 6 + 5 is added = 11
+        //then 11 + 2 is added = 13
+        //then 13 + 1 is added = 14 
+        //14 is the answer
+        
+
+
+    </script>
+</body>
+</html>

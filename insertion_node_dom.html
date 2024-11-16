@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insertion Node in DOM</title>
+</head>
+<body>
+    <div class="container">
+        I am start of the container
+        <div id="first">
+            I Am a first 
+        </div>
+        I am end of the container
+    </div>
+    <script>
+        let a = document.getElementsByTagName('div')[0]
+        // let b = document.getElementsByTagName('div')[0]
+        // a.innerHTML = a.innerHTML + '<h1>Hello World</h1>';
+        
+
+
+
+        let div = document.createElement('div');
+        //Yee tarika karne seeh yaha prr ek div create hoo jayenga 
+        div.innerHTML = '<h1>Hello World</h1>';
+        // yaha innerHTML mein Hello World add krr rahe he hum no surprises 
+        // what so ever
+
+        // document.body.append or append child append hee karte dono
+        a.appendChild('div');
+        // yee jhod dengsa div koo andar kee tag mein 
+
+
+        // .append kiya toh end of the node pee aayengaa 
+
+        // b.append('div');
+        // tuu dekh lena output piche append kara hoga 
+
+
+        // .prepend kiya toh start mein atta hee 
+        
+    </script>
+</body>
+</html>

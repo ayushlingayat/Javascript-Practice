@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise in JavaScript</title>
+</head>
+<body>
+    <script>
+
+
+let promise = new Promise(function(resolve , reject ){
+    console.log("hello");
+    resolve(56)
+}) 
+
+console.log("This is 1st hello world");
+
+setTimeout(function(){
+    console.log("This is 2nd hello world");
+},4000);
+
+console.log("This is 3rd hello world")
+
+console.log(promise);
+
+// this is asynchronous thing in javascript 
+
+    </script>    
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inner Outer Html</title>
+</head>
+<body>
+    <span id="first">Hey I am Span !</span>
+    <script>
+        let a = first.innerHTML 
+        console.log(a);
+        //yaha innerHTML get hora hee
+        //sara ander kaa return kar 
+        // raha hee yee inner html okk span tag mein kaa 
+        // matlab andar kaa text return hora haa hee basically 
+        // We can also set innerHTML 
+
+        let b = first.innerHTML = "Hii my name is Ayush";
+        //yaha innerHTML set hora hee 
+        console.log(b);
+
+        //.innerHTML koo get aur set dono krr sakhte hee 
+        // Note : agar set karte wakt 
+        // tag bhi diya open close phir bhi set hota hee
+
+        //yee element node
+        //kee liye hee kaam karti hee aur iska typeof string hoga
+
+        // outerHTML contains full HTML + innerHTML
+        // we can also perform get and set on outerHTML elements
+        // yee pura tag hee dee deta hee Inner bhi include hota isme 
+
+        let c = first.outerHTML
+        console.log(c);
+
+        let d = first.outerHTML = "<div>Hii Ayu Here</div>";
+        console.log(d);
+
+        // document.body.textContent ==> 
+        // Sarra content andar kaa dikha deta yee 
+        //website as a text copy hoti hee isse 
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callbacks</title>
+</head>
+<body>
+    <h3>CallBacks Revision</h3>
+    <script>
+        function loadscript(src , callback){
+            let script = document.createElement('script');
+            script.src = src;
+
+
+            //Jab script load hoo jaa yee tab script.onload kaa yee hee matlab hee bss 
+             
+
+            script.onload = function(){
+                console.log('Script is loaded' , src);
+            }
+
+
+            callback(src);  //Jab load hoo jayengi script tab call back bhi load hoo jayenga its that simple 
+
+            // jo bhi argument reha vooh call karte veeh dee sakhte apen 
+
+
+            //Jab script error hua script.error mein tab error kaa yee matlab nikalta bss
+
+            script.error = function(){
+                console.log("Error in the Script loading :" , src);
+            }
+
+            document.body.appendChild(script);
+        }
+
+
+
+        // YEE joo iske niche mein function likh raha huu mein vooh sarre mein callback mein argument dee sakta huu 
+
+        function hello(src){
+            alert("Hello World" + " " + src);
+        }
+        
+        function goodMorning(src){
+            alert("goodMorning" + " " + src);
+        }
+
+
+        // function koo function argument dee diya aur yehi callback hoti hee 
+
+
+
+
+
+        loadscript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" , hello)
+
+
+
+        // jab hum function kaa naam pass kardete as an argument jo already function tha usmein usko bolte callbacks 
+    </script>
+</body>
+</html>

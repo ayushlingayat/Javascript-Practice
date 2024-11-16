@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Operator in JavaScript</title>
+</head>
+<body>
+    <script>
+        let ayu = 34;
+        ayu += 5;  //actual value mein 5 add hua          value = 39     34+5 = 39
+
+        ayu-= 2; //Actual value mein 2 ghata diya         value = 37     39-2 = 37
+
+        console.log(ayu);
+        console.log(typeof(ayu));
+
+        // Comparision Operator
+        let a = 34;
+        let b = "34";
+        
+        console.log("a==b" , a==b);
+        console.log("a===b" , a===b);
+        console.log("a!=b" , a!=b);
+        console.log("a!==b" , a!==b);
+
+
+        // Logical Operators
+        // && -> Iska alag seeh truth table banta hee 
+        
+        // True + True = True
+        // True + False = False
+        // False + True = False
+        // False + False = False
+
+        let x = 45;
+        let y = 67;
+
+        console.log(x<y && x==y);               //True + False = False
+        console.log(x<y && y>x);                //True + True = True
+
+        // || -> Iska alag seeh truth table banta hee 
+        // True + True = True
+        // True + False = True
+        // False + True = True
+        // False + False = False
+
+        console.log(y<x || x>y);  //Dono False Hee
+
+        console.log(y>x || x==y);  //Ek true toh ek False
+
+
+        // Jo false ko true or true ko false karde basically usko ! Operator khete hee 
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_Methods</title>
+</head>
+<body>
+    <script>
+        let num = [11,22,33,44,55];
+
+        // Now we will see the array methods 
+        // .toString() --> Yee Convert karta Numbers koo string mein 
+
+        let a = num.toString(); //Convert it to a string variable.method // Function
+        console.log(a);
+        console.log(typeof a);
+
+        // .join("_Seperator from which it will join") --> Join method sarre array koo join kar deta hee using a Seprator 
+        
+        let num_1 = ['Ayush','Shyam','Lingayat',23];
+
+        let b;
+        b = num_1.join(" and ");
+
+        console.log(b);
+        console.log(typeof b); //Iska type string hee bata raha hee 
+
+        // pop method --> variable.()pop yee last vale element koo array seeh pop kar deta hee aur array koo update karta hee 
+        
+        let num_2 = ['Ayush','Sumit','Aishwarya','Pooja'];
+        let c = num_2.pop();
+        console.log(num_2);
+
+        // pop ek aesha method hee joo same array koo change karr deta hee e
+        // Iske ek khasiyat hee kii yee pop element koo bhi return krr deta hee niche example hee
+
+        console.log(c);    //Abb naa return value milengi jo pop kiya vooh dekh lena 
+
+        // push method --> Yee push method naa Array kee end mein element koo add krr deta hee okk
+        // variable.push()
+
+        let num_3 =[45,67,78,98];
+        let d = num_3.push(456);
+        console.log(num_3);
+
+
+        console.log(d); //Yee return karta hee length koo 
+        //Push returns the new array length 
+
+        // Abb baat karte hee shift aur unshift kii 
+        // shift() --> Removes First element and returns it 
+
+        let num_4 = [345,567,78,89,100];
+        let e = num_4.shift();
+       
+        // Aur abb naa return kii value likhta huu 
+        console.log(e); //Yaha pee kya remove kiya vooh bata tha hee yee 
+
+        // Yee Original Array koo modify krr dene vala method hee yee 
+        console.log(num_4);
+
+        // unshift() -->  Adds the new element to the array from the begining of the array
+        
+        num_5 =['Ayush','Rushab','Ritik','Sumit'];
+        let f = num_5.unshift('Priti');
+        console.log(num_5);
+        
+        
+        // In return value it returns the new array length 
+        console.log(f);
+
+
+        num_6 = ['this','is','a','array'];
+        console.log(num_6);
+
+
+        //Delete statement delete the array of which index we choose 
+         let g = delete num_6[2];
+
+        // Deleting and then printing at the console      
+        console.log(num_6);  
+
+        console.log(g); //This is giving boolean value therefore its return type is boolean 
+
+        //And one more thing Length will be four after deleting also 
+
+        // Just delete use karte toh length affect nhi hoti darling 
+
+        console.log(num_6.length); //see it is giving 4 as a output 
+
+        // variable.concat() ==> is method seeh 2 array ek dusre seeh concat hoo sakhte 
+
+        let h = [1,2,3,4];
+        let i = [5,6,7,8];
+        let j = [9,10];
+
+        console.log(h.concat(i,j));      //Aesha kiya toh array concat hogaya automatically 
+
+        // Returns the new array but never change the existing array
+
+        // sort() ==> Yee jo sort method hee wooh original array koo modify karr deta hee
+
+        // ek baad dhyan mein rahna sort method alphabetically sort karta hee array koo
+
+        let compare = (a,b) =>{
+            return(a-b);
+        }
+
+        let num_7 = [224,778,112,455,333,123,576,645 ,3 ,6];
+        // It will sort in alphabetical order 
+        console.log(num_7.sort());
+        
+        
+        // Agar sorting ascending order mein karni
+        // hoo toh function bananaa padta hee compare aur vooh hee ascending krr deta
+        console.log(num_7.sort(compare));
+
+
+        // .reverse method ==> ulta kardeta array koo simple 
+
+        let num_8 = [1,2,3,4,5,6,7,8,9,0];
+        console.log(num_8.reverse());
+
+
+        // Now Splice and Slice very Important Concepts 
+
+        // Splice ==> Splice is used to add new items to an array 
+
+
+        // num.splice(start_index,remove_elements,what_you_want_to_add_in_remove_place);
+
+        num_8 = [123,456,789,1011,1213,1415,1617];
+
+        let husar = num_8.splice(1,3,1819,2021);
+
+        console.log(num_8);
+
+        console.log(husar);
+        // Yee Source array koo modify karta hee 
+        // aur yee return karta  deleted values koo kabhi variable kee ander liya method toh 
+
+        // slice ==> yee create karta hee new array koo original array koo modify nhi karta hee yee 
+
+        num_9 = [11,33,66,99,09,08,05,02];
+
+        let here = num_9.slice(2,5);
+        console.log(here); //yee return karta jo element slice(gayab kiye vooh)
+        // console.log(num_9.slice(2,5));
+
+        // Classical for loop hee ratlo mere bhai 
+
+        // for(let i=0 ; i<num.length ; i++){
+            // console.log(num[i]);    //Asani seeh access karr sakhte hoo 
+        // }       Ratle yaar bc ayu
+
+        num_10 = "Ayush";
+        here_1 = Array.from(num_10);
+
+        console.log(here_1);
+        console.log(typeof(here_1)); //Yee object bata yenga type of mein matlab array he bangaya yee
+
+        // For-of and For-in for array :-
+
+        // for-of
+        //Yeeh bhi ratlo kaam aa jayenga future mein 
+        //This is used to iterate the string 
+        for(let k of num_10){
+            console.log(k);
+        }
+
+        // for-in
+        //Ratle ayu isko bhi 
+        // In Array for-in gives the index number   
+
+        for(let p in num_10){
+            console.log(p);
+            console.log(num_10[p]); //Yee elements denga array kee 
+        }
+
+        
+    </script>
+</body>
+</html>

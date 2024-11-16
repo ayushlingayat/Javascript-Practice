@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Expresssion</title>
+</head>
+<body>
+    <script>
+        let a = prompt("Hello , What's your Name :");
+
+        console.log(a);
+        console.log(typeof(a));
+
+
+        let b ="45";
+        b = Number.parseInt(b); //This parseInt converts a Number into a String 
+
+        console.log(b);
+        console.log(typeof(b))
+
+        let age = 24;
+
+        if(age>18){
+            console.log("The person is Eligible to Vote");
+            
+        }
+        else{
+            console.log("The person is not Eligible to Vote");
+        }
+        
+        // if else if else
+
+        let population = prompt("Enter your Population");
+
+        if(population<0){
+            console.log("This is invalid population");
+        }
+        else if(population<30){
+            console.log("Your are a kid brother");
+        }
+        else{
+            console.log("This is right population");
+        }
+        
+
+
+        // Switch case Statements
+
+    let boy =prompt("Give the boy age");
+    switch (boy) {
+    case '20':
+        console.log("The boy is of 20 age");
+        break; //break lagaya isliye yehi execute hora idar
+    case '21':
+        console.log("The boy is of 21 age");
+        break;
+    case '22':
+        console.log("The boy is of 22 age");
+    break;
+    default:
+    console.log("Nothing to print");
+}
+    </script>
+</body>
+</html>

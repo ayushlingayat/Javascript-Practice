@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio for learning</title>
+    <style>
+        *{
+
+            margin:0;
+            padding:0;
+            /* height: 100vh; */
+            /* width:100px; */
+        }
+        ul{
+            display:flex;
+            margin:0;
+            background-color: aqua;
+            padding:5px 0px;
+
+
+        }
+
+        ul li{
+            list-style: none;
+        }
+        .padding{
+            padding:3px 23px;
+            margin:13px 16;
+
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li class="padding"><a href=""></a>Home</li>
+            <li class="padding"><a href=""></a>About Me</li>
+            <li class="padding"><a href=""></a>Contact</li>
+            <li class="padding"><a href=""></a>Hire Me</li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <p>I am a good boy okk </p>
+    </div>
+    <script>
+
+
+
+
+        let changeBgRed = () =>{
+            document.body.firstElementChild.style.background = "red"
+        };
+
+        //This is called as Css Manipulation 
+
+
+        let a =  document.body 
+        console.log(a.firstChild); //toh yee naa nodes deta hee vooh text node comment nodes hoo sakhte hee 
+        console.log(a.firstElementChild); //yee khuch bhi karlo bss element hee dega 
+        //childElementNode --> .children hee hota hee specifically 
+
+
+    </script>
+</body>
+</html>

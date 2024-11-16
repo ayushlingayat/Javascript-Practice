@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches_closest and Contains in JavaScript</title>
+</head>
+<body>
+    <div id="id1" class="box">This is id 1 <span id="sp1">Span</span></div>
+    <div id="id2">This is id 2</div>
+    <!-- three important methods hote hee DOM koo search karne kee liye  -->
+    <script>
+        let idd = document.getElementById("id1");
+        console.log(id1.matches(".class"));
+        
+        //it will return false because id1 is id not it does not matches .class here
+        //it gives boolean value here 
+        console.log(id1.matches(".box"));
+        //now it will return true kiyu kii .box class present hee udar 
+
+        console.log(sp1.closest("#sp1"));
+    </script>
+</body>
+</html>

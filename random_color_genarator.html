@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <style>
+        *{
+            margin: 0px;
+            padding:0px;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body , html{
+            height: 100%;
+            width: 100%;
+        }
+        .main-container{
+            height: 100%;
+            width: 100%;
+            /* background-color: black; */
+            background-image: url('https://source.unsplash.com/random/1920x1080/?wallpaper,landscape');
+            /* background-position: center center; */
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+        h1{
+            color: #000000;
+            margin-top: 23px;
+            opacity: 1;
+        }
+        .btn{
+            width: 130px;
+            height: 70px;
+            border-radius: 5px;
+            margin-top: 23px;
+            cursor: pointer;
+            font-size: 17px;
+            opacity: 1;
+        }
+        .btn:hover{
+           background-color: #000000;
+           color:white;
+           border:2px solid rgb(220, 104, 255);
+           opacity: 1;
+        }
+
+        .bg-change-div{
+            height: 30%;
+            width: 30%;
+            border:2px solid rgb(0, 0, 0);
+            margin-top: 23px;
+            opacity: 1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <h1>It will display the color</h1>
+        <button class="btn">Generate color 🤯👇</button>
+        <div class="bg-change-div"></div>
+    </div>
+
+    <script>
+        let btn = document.querySelector('button');
+
+btn.addEventListener('click', () => {
+    let h1Elements = document.querySelectorAll('h1');
+    h1Elements.forEach(h1 => {
+        let getColor = randomColor();
+        h1.innerText = `The generated color is ${getColor}`;
+    });
+
+    let div = document.querySelector('.bg-change-div');
+    div.style.backgroundColor = randomColor();
+    
+});
+
+let randomColor = () => {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+
+    let color = `rgb(${red},${green},${blue})`;
+    return color;
+};
+
+    </script>
+</body>
+</html>
